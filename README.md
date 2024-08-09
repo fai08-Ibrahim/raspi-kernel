@@ -1,6 +1,3 @@
-### README File
-
-```markdown
 # Raspberry Pi Kernel Development
 
 This project involves developing a small kernel for the Raspberry Pi, implementing a command-line interface (CLI) with dynamic memory allocation, Caesar cipher functionality, and more. The goal is to gain hands-on experience with low-level programming, kernel development, and working with ARM architecture.
@@ -17,7 +14,7 @@ This project involves developing a small kernel for the Raspberry Pi, implementi
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/fai08-Ibrahim/raspi-kernel.git
-   cd <Your respective raspi-kernel folder directory>
+   cd raspi-kernel
    ```
 
 2. **Download Necessary Packages**:
@@ -54,7 +51,7 @@ This project involves developing a small kernel for the Raspberry Pi, implementi
 
 ### boot.S
 - **_start**: Entry point where control is handed from the bootloader to the kernel.
-- **Stack Pointer**: Setup in `boot.S`.
+- **Stack Pointer**: Set up in `boot.S`.
 - **BSS Segment**: Cleared and initialized for C global variables.
 - **Kernel Main**: Execution jumps to `kernel_main` after setup.
 
@@ -65,11 +62,11 @@ This project involves developing a small kernel for the Raspberry Pi, implementi
 
 ### linker.ld
 - **Memory Layout**: Defines the layout, starting at address `0x8000`.
-- **Sections**: `.text`, `.rodata`, `.data`, `.bss` are aligned for memory paging.
+- **Sections**: `.text`, `.rodata`, `.data`, and `.bss` are aligned for memory paging.
 
 ## Features
 
-- **Dynamic Memory Allocation**: Implemented with a custom `malloc` and `free`.
+- **Dynamic Memory Allocation**: Implemented with custom `malloc` and `free` functions.
 - **Command-Line Interface (CLI)**: Supports basic command processing and Caesar cipher encryption/decryption.
 - **Custom `printf` Implementation**: Supports `%s` for strings and `%d` for integers.
 - **Linked Lists**: Managed with dynamic memory allocation.
@@ -87,9 +84,4 @@ project-root/
 ├── src/
 │   ├── common/
 │   └── kernel/
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
